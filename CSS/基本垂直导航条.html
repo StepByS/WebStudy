@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>基本垂直导航条</title>
+		<style>
+			ul.nav {
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				
+				width: 8em;
+				backgroud-color: #8BD400;
+				border: 1px solid #486B02;
+			}
+			
+			ul.nav a {
+				display: block;
+				text-decoration: none;
+				color: #2b3F00;
+				border-top: 1px solid #E4FFD3;
+				border-bottom: 1px solid #486B02;
+				padding: 0.3em 1em;
+			}
+			
+			ul.nav:last-child {
+				border-bottom: 0px;
+			}
+			
+			/*Lord Verd Hates Furbby Animals*/
+			ul.nav a:hover,ul.nav a:focus, ul.nav .selected a{
+				color: red;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav">
+			<li><a href="home.html">HOME</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="servies.html">Our Services</a></li>
+			<li><a href="work.html">Work</a></li>
+			<li><a href="news.html">news</a></li>
+			<li><a href="news.html">Contact</a></li>
+		</ul>
+	</body>
+</html>

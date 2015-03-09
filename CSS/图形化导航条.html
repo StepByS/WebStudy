@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>图形化导航条</title>
+		<style>
+			ul.nav {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				width: 72em;
+				overflow: hidden;
+				background: #FAA819 url(mainNavBg.gif) repeat-x;
+			}
+			
+			ul.nav li {
+				float: left;
+			}
+			
+			ul.nav li:first-child a{
+				background-image: none;
+			}
+			
+			ul.nav a {
+				display: block;
+				padding: 0 2em;
+				line-height: 2.1em;
+				text-decoration: none;
+				color: #fff;
+				background: url(divider.gif) repeat-y left top;
+			}
+			
+			ul.nav a:hover, ul.nav a:focus{
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav">
+			<li><a href="home.htm">HOME</a></li>
+			<li><a href="about.htm">About</a></li>
+			<li><a href="news.htm">News</a></li>
+			<li><a href="products.htm">Products</a></li>
+			<li><a href="services.html">services</a></li>
+			<li><a href="client.html">Client</a></li>
+			<li><a href="case-studients.html">Case Student</a></li>
+		</ul>
+	</body>
+</html>
