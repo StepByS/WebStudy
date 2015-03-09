@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title> CSS3  background新特性的学习   多背景轮转 </title>
+		<style>
+			div {
+				width: 400px;
+				height: 400px;
+				margin: 50px auto;
+				background-image: url(image/0.jpg), url(image/1.jpg), url(image/2.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%, 100% 100%, 100% 100%;
+				background-position: 0px 0px, -500px -500px, -500px -500px;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var div = document.getElementsByTagName("div")[0];
+				var positionArr = ['-500px -500px,0px 0px,-500px -500px', '-500px -500px,-500px -500px,0px 0px', '0px 0px, -500px -500px, -500px -500px'];
+				var i = 0;
+				setInterval(function(){
+					div.style.backgroundPosition = positionArr[i%3];
+					i ++;
+				},1000);
+			};
+			
+			/*由于js只能取到HTML的行内样式，要想取到内嵌样式或链接样式需要特殊处理。下面的函数实现了兼容性*/
+			function getStyle(obj, attr) {
+				if (window.getComputedStyle) {
+					return getComputedStyle(obj,null)[attr];
+				} else {
+					return obj.currentStyle[attr];
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<p>
+			CSS3  background新特性的学习
+			1、background-size
+			2、background-origin
+			3、background-clip   该特性和2是一样的原理上面是针对于图片，下面的属性是针对于背景颜色
+			4、多背景颜色
+		</p>
+		<div></div>
+	</body>
+</html>
